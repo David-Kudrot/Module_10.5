@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<br>
+    <h1>Django Templates Filter Practise 🙂 
+    </h1>
+    <br>
+
+    <h2 style="text-align:center;">
+        1 er ghorer namta <br>
+        {{data.array| join:"</br>"}}
+    </h2>
+    <hr>
+
+    <h2>
+        date filter: <br>
+        {{data.date | date:"d-m-y"}}
+        
+    </h2>
+    <hr>
+    <h2>
+        value | first <br>
+        {{data.fruitList | first}}
+        
+    </h2>
+    <hr>
+    <h2>
+        value | last <br>
+        {{data.fruitList | last}}
+        
+    </h2>
+    <hr>
+    <h2>
+        value | length <br>
+        {{data.fruitList | length}} <br>
+        {{"AmarBariSundorbonerBandorbon" | length}}
+        
+    </h2>
+    <hr>
+    <h2>
+        value | lower <br>
+        {{data.fruitList | lower}} <br>
+        {{"AmarBariSundorbonerBandorbon" | lower}}
+        
+    </h2>
+    <hr>
+    <h2>
+        value | upper <br>
+        {{data.fruitList | upper}} <br>
+        {{"AmarBariSundorbonerBandorbon" | upper}}
+        
+    </h2>
+    <hr>
+    <h2>
+        value | time <br>
+        {{ data.datetimenow | time:"H:i" }} <br>        
+        {{ data.datetimenow | time:"H\h i\m" }} <br>        
+    </h2>
+    <hr>
+    <h2>
+        value | title <br>
+        {{"oh , so you are happy now?" | title}} <br>
+        {{"Chagole ki na bole pagol a ki na khai" | title}}
+        
+    </h2>
+    <hr>
+    <h2>
+        value | truncatechars <br>
+        {{ 'Happy coding guys' | truncatechars:6 }} <br>
+        
+    </h2>
+    <hr>
+    <h2>
+        value | wordcount <br>
+        {{ 'You can do a lot of modifications with template filters' | wordcount }} <br>
+        
+    </h2>
+    <hr>
+    <h2>
+        value | striptags(to remove all html tags)  <br>
+        {{ "<b>I</b> <button>love</button> <span>dogs</span>" | striptags }} <br>
+        
+    </h2>
+    <hr>
+    <h2>
+        value |  make_list <br>
+        {{ 'Earthly' | make_list }} <br>
+        
+    </h2>
+    <hr>
+    <h2>
+        value |  truncatewords <br>
+        {{ "I remember as a child, and as a young budding naturalist, spending \
+        all my time observing and testing the world around me—moving pieces, \
+        altering the flow of things, and documenting ways the world responded \
+        to me. Now, as an adult and a professional naturalist, I've approached 
+        language in the same way, not from an academic point of view but as a \
+        curious child still building little mud dams in creeks and chasing after \
+        frogs. So this book is an odd thing: ha j bo ro la, I want update  it is a naturalist's walk through the \
+        language-making landscape of the English language, and following in \
+        the naturalist's tradition it combines observation, experimentation, \
+        speculation, and documentation—activities we don't normally \
+        associate with language." | truncatewords:36 }} <br>
+        
+    </h2>
+
+
+
+    <br><br>
+    <h1>The End</h1>
+
+    
+</body>
+</html>
